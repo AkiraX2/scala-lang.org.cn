@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://www.scala-lang.org/ -->
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths wf-museoslab-i1-active wf-museoslab-i3-active wf-museoslab-i7-active wf-museoslab-n1-active wf-museoslab-n3-active wf-museoslab-n7-active wf-proximanova-n7-active wf-active hb-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Scala编程语言（中文）</title>
+
+
+
+    <link rel="icon" type="image/png" href="http://www.scala-lang.org/resources/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="http://www.scala-lang.org/resources/favicon.ico">
+
+    <!-- prettify CSS (corresponding js at footer)-->
+    <link rel="stylesheet" href="./resources/css/prettify.css" type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./resources/css/bootstrap.css" type="text/css">
+
+    <link href="./resources/css/css" rel="stylesheet" type="text/css">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./resources/css/main.css" type="text/css">
+
+    <!-- Typekit (should stay at top of page, do not move to footer)-->
+    <script async="" src="./resources/js/analytics.js"></script><script type="text/javascript" async="" src="./resources/js/ga.js"></script><script type="text/javascript" src="./resources/js/abh3wgk.js"></script>
+    <style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/87990a/1w;museo-slab,2,QKx:M:i1,SLT:M:i3,QL2:M:i7,QL7:M:n1,SKB:M:n3,VnC:M:n7;proxima-nova,2,W0Y:M:n7/d?3bb2a6e53c9684ffdc9a9bf51d5b2a62c96de82d85c740a9a6cf0065cf54757f6358eb06e81aab525ba960153ce9241c59036ceea885ee11db663859ed77a1f174ed5f05b819b3376c50e179edd519e280651d9e1f5b73e3331ad90dd3159b203487aca078faf13af6235a44be471da0fa5c05f37f6dcdde325be4a7761340333ee60a1e328f588e2e"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.scala-lang.org/feed/index.xml">
+<style>
+  .footer2 {
+    position: relative;
+    z-index: 10;
+    background: #025A71;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    margin-top: -50px;
+  }
+</style>
+  </head>
+  <div id="hook">
+      <div id="loader">
+          <div class="spinner"></div>
+      </div>
+      <span id="hook-text">Reloading...</span>
+  </div>　
+
+<div class="splash" style="position: relative; z-index: 0; background: none;">
+  <div class="darkblue-overlay">&nbsp;</div>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="scala-logo">
+          <img src="./resources/img/scala-logo-white@2x.png" alt="Scala Logo" width="150" height="58">
+          <!-- <div class="spiral-logo"><img src="/resources/img/scala-spiral-white.png"/></div> -->
+          <!-- <div class="scala-text">Scala</div> -->
+        </div>
+        <ul class="nav">
+  <li><a href="http://www.scala-lang.org/documentation/">文档</a></li>
+  <li><a href="http://www.scala-lang.org/download/">下载</a></li>
+  <li><a href="http://www.scala-lang.org/community/">社区</a></li>
+  <li><a href="http://www.scala-lang.org/contribute/">贡献</a></li>
+  <li id="source-code">
+    <a href="http://github.com/scala/scala"><img src="./resources/img/github-logo@2x.png" alt="GitHub Logo" width="16" height="16"></a>
+    <div class="toptip" style="display: none;">源码</div>
+  </li>
+  <li id="scala-lang-twitter">
+    <a href="http://twitter.com/scala_lang"><img src="./resources/img/twitter-logo-white@2x.png" alt="Twitter Logo" width="20" height="16"></a>
+    <div class="toptip" style="display: none;">Scala Twitter</div>
+  </li>
+</ul>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div class="splash-text ontop">
+          <h2 style="font-weight: 700;">面向对象 & 函数式编程</h2>
+          <p class="splash-pitch">
+            汇聚了两大世界的精髓。类的继承，保证了代码重用和可拓展性，行为，用高阶函数来实现，然其并不止于此。
+            <!-- Have the best of both worlds. Construct elegant class hierarchies
+            for maximum code reuse and extensibility, implement their behavior using
+            higher-order functions. Or anything in-between. -->
+          </p>
+          <a class="learn-more-btn" href="http://www.scala-lang.org/what-is-scala.html">了解更多</a>
+          <div class="marker">
+            <div class="dot"></div>
+            <div class="pulse"></div>
+          </div>
+          <p>&nbsp;</p>
+          <div class="tip" style="display: none;">
+            Scala诞生于2003年，作者Martin Odersky和他的EPFL研究小组，在日内瓦湖和阿尔卑斯山附近，瑞士，洛桑。Scala已经成长为一门开源编程语言，被数以万计的开发者使用，并且由全世界的开发者开发和维护。
+            <!-- Scala began life in 2003, created by Martin Odersky and his research group at EPFL, next to Lake Geneva and the Alps, in Lausanne, Switzerland. Scala has since grown into a mature open source programming language, used by hundreds of thousands of developers, and is developed and maintained by scores of people all over the world. -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 540px; width: 1440px; z-index: -999998; position: absolute;"><img src="./resources/img/view-leman-opt2.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1440px; height: 942.857142857143px; max-width: none; z-index: -999999; left: 0px; top: -201.428571428571px;"></div></div>
+
+<div class="container central">
+  <div class="translucent-circle"></div>
+  <div class="opaque-circle"></div>
+  <a class="central-btn download" id="main-download-button" href="http://www.scala-lang.org/download/">下载</a>
+  <a class="central-btn api" href="http://www.scala-lang.org/api/">API 文档&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <div class="big-scala-spiral"><img src="./resources/img/smooth-spiral@2x.png" alt="Spiral" width="167" height="246"></div>
+  <div class="central-btn scala-version"><span class="superbold">Scala</span><br>2.11.7</div>
+</div>
+
+<div class="darkbluebar">
+  <div class="container" style="position: relative;">
+    <div class="left-side">
+      <p class="getting-started"><a href="http://www.scala-lang.org/documentation/getting-started.html"><b>由此开始</b></a></p>
+      <p class="dev-releases"><img src="./resources/img/gears@2x.png" alt="gears icon" width="16" height="16"><a href="http://www.scala-lang.org/download/">&nbsp;里程碑，日更等。</a></p>
+      <p class="all-releases"><img src="./resources/img/list@2x.png" alt="list icon" width="12" height="11"><a href="http://www.scala-lang.org/download/all.html">&nbsp;所有之前的版本</a></p>
+    </div>
+    <div class="right-side">
+      <p class="getting-started"><b>API: </b><a href="http://www.scala-lang.org/api/current/"><b>当前</b></a> | <a href="http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/"><b>日更</b></a></p>
+      <p class="dev-releases"><img src="./resources/img/list@2x.png" alt="list icon" width="12" height="11"><a href="http://www.scala-lang.org/documentation/api.html">&nbsp;所有之前的API文档</a></p>
+      <p class="dev-releases"><img src="./resources/img/books@2x.png" alt="books icon" width="14" height="16"><a href="http://www.scala-lang.org/documentation/">&nbsp;Scala文档</a></p>
+      <p class="all-releases"><img src="./resources/img/books@2x.png" alt="books icon" width="14" height="16"><a href="http://www.scala-lang.org/files/archive/spec/2.11/">&nbsp;语言定义</a></p>
+    </div>
+  </div>
+</div>
+
+ <div class="bullet-point-box">
+
+  <div class="bullet-row-1-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="span12 bullet-point">
+          <h2><span>Scala概述</span></h2>
+          <p class="click">&nbsp;点击下方box动态了解Scala信息。&nbsp;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4 bullet-point" id="java-interop" style="height: 173px;">
+          <h3>和Java无缝结合</h3>
+          <p>Scala运行在JVM上，因此，Scala和Java运行栈可以几乎无缝的集成在一起。</p>
+        </div>
+        <div class="span4 bullet-point" id="type-inference" style="height: 173px;">
+          <h3>类型推断</h3>
+          <p>类型系统并非那么“静态”，让它更好的为你工作！</p>
+        </div>
+        <div class="span4 bullet-point" id="concurrency-distribution" style="height: 173px;">
+          <h3>高并发<br>&amp; 分布式</h3>
+          <p>使用支持数据并行操作的集合，使用高并发和分布式支持的Actors，或者Future特性来进行异步编程。</p>
+        </div>
+      </div>
+      <div class="code-snippet-arrow"></div>
+    </div>
+  </div>
+
+  <div id="code-snippet-row1">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <div class="bullet-row-2-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="span4 bullet-point" id="traits" style="height: 173px;">
+          <h3>Traits</h3>
+          <p>Trait（特质）拥有Java里的类的强大和接口的灵活，支持多重继承！</p>
+            <!-- Combine the flexibility of Java-style interfaces with the power of classes. Think principled multiple-inheritance. -->
+        </div>
+        <div class="span4 bullet-point" id="pattern-matching" style="height: 173px;">
+          <h3>模式匹配</h3>
+          <p>参见Swtich关键字，支持类继承、序列等等。</p>
+        </div>
+        <div class="span4 bullet-point" id="higher-order-functions" style="height: 173px;">
+          <h3>高阶函数</h3>
+          <p>函数是第一类对象，类型安全。随意使用和传递。</p>
+        </div>
+      </div>
+      <div class="code-snippet-arrow"></div>
+    </div>
+  </div>
+
+  <div id="code-snippet-row2">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <div class="where-to-learn-more">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <a class="learn-more-btn" href="http://www.scala-lang.org/what-is-scala.html">了解更多</a>
+          <p>或者访问 <a class="italicize" href="http://www.scala-lang.org/documentation">Scala文档</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- hidden code-snippet content -->
+<div id="hidden-java-interop"><div class="java-interop-wrapper" style="width: 500px">
+<figure class="code java-interop1" style="margin-top: 20px;">
+  <figcaption>Author.scala</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Author</span><span class="pun">(</span><span class="kwd">val</span><span class="pln"> firstName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span></code></li><li class="L1"><code><span class="pln">    </span><span class="kwd">val</span><span class="pln"> lastName</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Comparable</span><span class="pun">[</span><span class="typ">Author</span><span class="pun">]</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L2"><code></code></li><li class="L3"><code><span class="pln">  </span><span class="kwd">override</span><span class="pln"> </span><span class="kwd">def</span><span class="pln"> compareTo</span><span class="pun">(</span><span class="pln">that</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Author</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">    </span><span class="kwd">val</span><span class="pln"> lastNameComp </span><span class="pun">=</span><span class="pln"> </span><span class="lit">this</span><span class="pun">.</span><span class="pln">lastName compareTo that</span><span class="pun">.</span><span class="pln">lastName</span></code></li><li class="L5"><code><span class="pln">    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">lastNameComp </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> lastNameComp</span></code></li><li class="L6"><code><span class="pln">    </span><span class="kwd">else</span><span class="pln"> </span><span class="lit">this</span><span class="pun">.</span><span class="pln">firstName compareTo that</span><span class="pun">.</span><span class="pln">firstName</span></code></li><li class="L7"><code><span class="pln">  </span><span class="pun">}</span></code></li><li class="L8"><code><span class="pun">}</span></code></li><li class="L9"><code></code></li><li class="L0"><code><span class="kwd">object</span><span class="pln"> </span><span class="typ">Author</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">  </span><span class="kwd">def</span><span class="pln"> loadAuthorsFromFile</span><span class="pun">(</span><span class="pln">file</span><span class="pun">:</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.</span><span class="typ">File</span><span class="pun">):</span><span class="pln"> </span><span class="typ">List</span><span class="pun">[</span><span class="typ">Author</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">???</span></code></li><li class="L2"><code><span class="pun">}</span></code></li></ol></pre>
+</figure>
+<figure class="code java-interop2" style="margin-top: 10px;">
+  <figcaption>App.java</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="kwd">import</span><span class="pln"> static scala</span><span class="pun">.</span><span class="pln">collection</span><span class="pun">.</span><span class="typ">JavaConversions</span><span class="pun">.</span><span class="pln">asJavaCollection</span><span class="pun">;</span></code></li><li class="L1"><code></code></li><li class="L2"><code><span class="pln">public </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">App</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L3"><code><span class="pln">    public </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Author</span><span class="pun">&gt;</span><span class="pln"> loadAuthorsFromFile</span><span class="pun">(</span><span class="typ">File</span><span class="pln"> file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">&lt;</span><span class="typ">Author</span><span class="pun">&gt;(</span><span class="pln">asJavaCollection</span><span class="pun">(</span></code></li><li class="L5"><code><span class="pln">            </span><span class="typ">Author</span><span class="pun">.</span><span class="pln">loadAuthorsFromFile</span><span class="pun">(</span><span class="pln">file</span><span class="pun">)));</span></code></li><li class="L6"><code><span class="pln">    </span><span class="pun">}</span></code></li><li class="L7"><code></code></li><li class="L8"><code><span class="pln">    public void sortAuthors</span><span class="pun">(</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Author</span><span class="pun">&gt;</span><span class="pln"> authors</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L9"><code><span class="pln">        </span><span class="typ">Collections</span><span class="pun">.</span><span class="pln">sort</span><span class="pun">(</span><span class="pln">authors</span><span class="pun">);</span></code></li><li class="L0"><code><span class="pln">    </span><span class="pun">}</span></code></li><li class="L1"><code></code></li><li class="L2"><code><span class="pln">    public void displaySortedAuthors</span><span class="pun">(</span><span class="typ">File</span><span class="pln"> file</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L3"><code><span class="pln">        </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Author</span><span class="pun">&gt;</span><span class="pln"> authors </span><span class="pun">=</span><span class="pln"> loadAuthorsFromFile</span><span class="pun">(</span><span class="pln">file</span><span class="pun">);</span></code></li><li class="L4"><code><span class="pln">        sortAuthors</span><span class="pun">(</span><span class="pln">authors</span><span class="pun">);</span></code></li><li class="L5"><code><span class="pln">        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Author</span><span class="pln"> author </span><span class="pun">:</span><span class="pln"> authors</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L6"><code><span class="pln">            </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span></code></li><li class="L7"><code><span class="pln">                author</span><span class="pun">.</span><span class="pln">lastName</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">", "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> author</span><span class="pun">.</span><span class="pln">firstName</span><span class="pun">());</span></code></li><li class="L8"><code><span class="pln">        </span><span class="pun">}</span></code></li><li class="L9"><code><span class="pln">    </span><span class="pun">}</span></code></li><li class="L0"><code><span class="pun">}</span></code></li></ol></pre>
+</figure>
+</div>
+
+<div class="snippet-explanation" style="width: 370px;">
+<h3>Combine Scala and Java seamlessly</h3>
+<p>Scala classes are ultimately JVM classes. You can create Java objects, call
+their methods and inherit from Java classes transparently from Scala.
+Similarly, Java code can reference Scala classes and objects.</p>
+<p>
+In this example, the Scala class <code>Author</code> implements the Java
+interface <code>Comparable&lt;T&gt;</code> and works with Java
+<code>File</code>s. The Java code uses a method from the companion object
+<code>Author</code>, and accesses fields of the <code>Author</code> class.
+It also uses <code>JavaConversions</code> to convert between Scala collections
+and Java collections.
+</p></div>
+</div>
+<div id="hidden-type-inference"><figure class="code type-inference" style="width: 450px; margin-top: 20px;">
+  <figcaption>Type inference</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="pln">scala</span><span class="pun">&gt;</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="kwd">val</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">val</span><span class="pln"> age</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">   </span><span class="kwd">override</span><span class="pln"> </span><span class="kwd">def</span><span class="pln"> toString </span><span class="pun">=</span><span class="pln"> s</span><span class="str">"$name ($age)"</span></code></li><li class="L2"><code><span class="pln">     </span><span class="pun">|</span><span class="pln"> </span><span class="pun">}</span></code></li><li class="L3"><code><span class="pln">defined </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Person</span></code></li><li class="L4"><code></code></li><li class="L5"><code><span class="pln">scala</span><span class="pun">&gt;</span><span class="pln"> </span><span class="kwd">def</span><span class="pln"> underagePeopleNames</span><span class="pun">(</span><span class="pln">persons</span><span class="pun">:</span><span class="pln"> </span><span class="typ">List</span><span class="pun">[</span><span class="typ">Person</span><span class="pun">])</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L6"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">   </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">person </span><span class="pun">&lt;-</span><span class="pln"> persons</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> person</span><span class="pun">.</span><span class="pln">age </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">18</span><span class="pun">)</span></code></li><li class="L7"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">     </span><span class="kwd">yield</span><span class="pln"> person</span><span class="pun">.</span><span class="pln">name</span></code></li><li class="L8"><code><span class="pln">     </span><span class="pun">|</span><span class="pln"> </span><span class="pun">}</span></code></li><li class="L9"><code><span class="pln">underagePeopleNames</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">persons</span><span class="pun">:</span><span class="pln"> </span><span class="typ">List</span><span class="pun">[</span><span class="typ">Person</span><span class="pun">])</span><span class="typ">List</span><span class="pun">[</span><span class="typ">String</span><span class="pun">]</span></code></li><li class="L0"><code></code></li><li class="L1"><code><span class="pln">scala</span><span class="pun">&gt;</span><span class="pln"> </span><span class="kwd">def</span><span class="pln"> createRandomPeople</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L2"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">   </span><span class="kwd">val</span><span class="pln"> names </span><span class="pun">=</span><span class="pln"> </span><span class="typ">List</span><span class="pun">(</span><span class="str">"Alice"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Bob"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Carol"</span><span class="pun">,</span></code></li><li class="L3"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">       </span><span class="str">"Dave"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Eve"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Frank"</span><span class="pun">)</span></code></li><li class="L4"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">   </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">name </span><span class="pun">&lt;-</span><span class="pln"> names</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">yield</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L5"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">     </span><span class="kwd">val</span><span class="pln"> age </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Random</span><span class="pun">.</span><span class="pln">nextGaussian</span><span class="pun">()*</span><span class="lit">8</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">20</span><span class="pun">).</span><span class="pln">toInt</span></code></li><li class="L6"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">     </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Person</span><span class="pun">(</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">)</span></code></li><li class="L7"><code><span class="pln">     </span><span class="pun">|</span><span class="pln">   </span><span class="pun">}</span></code></li><li class="L8"><code><span class="pln">     </span><span class="pun">|</span><span class="pln"> </span><span class="pun">}</span></code></li><li class="L9"><code><span class="pln">createRandomPeople</span><span class="pun">:</span><span class="pln"> </span><span class="pun">()</span><span class="typ">List</span><span class="pun">[</span><span class="typ">Person</span><span class="pun">]</span></code></li><li class="L0"><code></code></li><li class="L1"><code><span class="pln">scala</span><span class="pun">&gt;</span><span class="pln"> </span><span class="kwd">val</span><span class="pln"> people </span><span class="pun">=</span><span class="pln"> createRandomPeople</span><span class="pun">()</span></code></li><li class="L2"><code><span class="pln">people</span><span class="pun">:</span><span class="pln"> </span><span class="typ">List</span><span class="pun">[</span><span class="typ">Person</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">List</span><span class="pun">(</span><span class="typ">Alice</span><span class="pln"> </span><span class="pun">(</span><span class="lit">16</span><span class="pun">),</span><span class="pln"> </span><span class="typ">Bob</span><span class="pln"> </span><span class="pun">(</span><span class="lit">16</span><span class="pun">),</span><span class="pln"> </span><span class="typ">Carol</span><span class="pln"> </span><span class="pun">(</span><span class="lit">19</span><span class="pun">),</span><span class="pln"> </span><span class="typ">Dave</span><span class="pln"> </span><span class="pun">(</span><span class="lit">18</span><span class="pun">),</span><span class="pln"> </span><span class="typ">Eve</span><span class="pln"> </span><span class="pun">(</span><span class="lit">26</span><span class="pun">),</span><span class="pln"> </span><span class="typ">Frank</span><span class="pln"> </span><span class="pun">(</span><span class="lit">11</span><span class="pun">))</span></code></li><li class="L3"><code></code></li><li class="L4"><code><span class="pln">scala</span><span class="pun">&gt;</span><span class="pln"> underagePeopleNames</span><span class="pun">(</span><span class="pln">people</span><span class="pun">)</span></code></li><li class="L5"><code><span class="pln">res1</span><span class="pun">:</span><span class="pln"> </span><span class="typ">List</span><span class="pun">[</span><span class="typ">String</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">List</span><span class="pun">(</span><span class="typ">Alice</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Bob</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Frank</span><span class="pun">)</span></code></li></ol></pre>
+</figure>
+
+<div class="snippet-explanation">
+  <h3>Let the compiler figure out the types for you</h3>
+<p>The Scala compiler is smart about static types. Most of the time, you need
+not tell it the types of your variables. Instead, its powerful type inference
+will figure them out for you.</p>
+<p>
+In this interactive REPL session (Read-Eval-Print-Loop), we define a
+class and two functions. You can observe that the compiler infers the result
+types of the functions automatically, as well as all the intermediate values.
+</p></div>
+</div>
+<div id="hidden-concurrency-distribution"><figure class="code concurrency" style="width: 450px; margin-top: 20px;">
+  <figcaption>Concurrent/Distributed</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="kwd">val</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> future </span><span class="pun">{</span><span class="pln"> someExpensiveComputation</span><span class="pun">()</span><span class="pln"> </span><span class="pun">}</span></code></li><li class="L1"><code><span class="kwd">val</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> future </span><span class="pun">{</span><span class="pln"> someOtherExpensiveComputation</span><span class="pun">()</span><span class="pln"> </span><span class="pun">}</span></code></li><li class="L2"><code><span class="kwd">val</span><span class="pln"> z </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a </span><span class="pun">&lt;-</span><span class="pln"> x</span><span class="pun">;</span><span class="pln"> b </span><span class="pun">&lt;-</span><span class="pln"> y</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">yield</span><span class="pln"> a</span><span class="pun">*</span><span class="pln">b</span></code></li><li class="L3"><code><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">c </span><span class="pun">&lt;-</span><span class="pln"> z</span><span class="pun">)</span><span class="pln"> println</span><span class="pun">(</span><span class="str">"Result: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> c</span><span class="pun">)</span></code></li><li class="L4"><code><span class="pln">println</span><span class="pun">(</span><span class="str">"Meanwhile, the main thread goes on!"</span><span class="pun">)</span></code></li></ol></pre>
+</figure>
+
+<div class="snippet-explanation">
+  <h3>Go Concurrent or Distributed with Futures &amp; Promises</h3>
+<p>In Scala, futures and promises can be used to process data <i>asynchronously</i>, making it easier to parallelize or even distribute your application.</p>
+<p>
+In this example, the <code>future{}</code> construct evaluates its argument asynchronously, and returns
+a handle to the asynchronous result as a <code>Future[Int]</code>.
+For-comprehensions can be used to register new callbacks (to post new things to do) when the future is
+completed, i.e., when the computation is finished.
+And since all this is executed asynchronously, without blocking, the main
+program thread can continue doing other work in the meantime.
+</p></div>
+</div>
+<div id="hidden-traits">
+
+<figure class="code traits" style="width: 450px;">
+  <figcaption>Traits</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="kwd">abstract</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Spacecraft</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">  </span><span class="kwd">def</span><span class="pln"> engage</span><span class="pun">():</span><span class="pln"> </span><span class="typ">Unit</span></code></li><li class="L2"><code><span class="pun">}</span></code></li><li class="L3"><code><span class="kwd">trait</span><span class="pln"> </span><span class="typ">CommandoBridge</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Spacecraft</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">  </span><span class="kwd">def</span><span class="pln"> engage</span><span class="pun">():</span><span class="pln"> </span><span class="typ">Unit</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L5"><code><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">_ </span><span class="pun">&lt;-</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> to </span><span class="lit">3</span><span class="pun">)</span></code></li><li class="L6"><code><span class="pln">      speedUp</span><span class="pun">()</span></code></li><li class="L7"><code><span class="pln">  </span><span class="pun">}</span></code></li><li class="L8"><code><span class="pln">  </span><span class="kwd">def</span><span class="pln"> speedUp</span><span class="pun">():</span><span class="pln"> </span><span class="typ">Unit</span></code></li><li class="L9"><code><span class="pun">}</span></code></li><li class="L0"><code><span class="kwd">trait</span><span class="pln"> </span><span class="typ">PulseEngine</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Spacecraft</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">  </span><span class="kwd">val</span><span class="pln"> maxPulse</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span></code></li><li class="L2"><code><span class="pln">  </span><span class="kwd">var</span><span class="pln"> currentPulse</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span></code></li><li class="L3"><code><span class="pln">  </span><span class="kwd">def</span><span class="pln"> speedUp</span><span class="pun">():</span><span class="pln"> </span><span class="typ">Unit</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">currentPulse </span><span class="pun">&lt;</span><span class="pln"> maxPulse</span><span class="pun">)</span></code></li><li class="L5"><code><span class="pln">      currentPulse </span><span class="pun">+=</span><span class="pln"> </span><span class="lit">1</span></code></li><li class="L6"><code><span class="pln">  </span><span class="pun">}</span></code></li><li class="L7"><code><span class="pun">}</span></code></li><li class="L8"><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">StarCruiser</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Spacecraft</span></code></li><li class="L9"><code><span class="pln">                     </span><span class="kwd">with</span><span class="pln"> </span><span class="typ">CommandoBridge</span></code></li><li class="L0"><code><span class="pln">                     </span><span class="kwd">with</span><span class="pln"> </span><span class="typ">PulseEngine</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L1"><code><span class="pln">  </span><span class="kwd">val</span><span class="pln"> maxPulse </span><span class="pun">=</span><span class="pln"> </span><span class="lit">200</span></code></li><li class="L2"><code><span class="pun">}</span></code></li></ol></pre>
+</figure>
+
+<div class="snippet-explanation">
+  <h3>Flexibly Combine Interface &amp; Behavior</h3>
+  <p>
+In Scala, <i>multiple traits</i> can be mixed into a class to combine their interface and their
+behavior.</p>
+<p>Here, a <code>StarCruiser</code> is a <code>Spacecraft</code> with a <code>CommandoBridge</code> that knows how to
+engage the ship (provided a means to speed up) and a <code>PulseEngine</code> that
+specifies how to speed up.
+</p></div>
+</div>
+<div id="hidden-pattern-matching"><figure class="code pattern-matching" style="width: 500px; float: right;">
+  <figcaption>Pattern matching</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="com">// Define a set of case classes for representing binary trees.</span></code></li><li class="L1"><code><span class="kwd">sealed</span><span class="pln"> </span><span class="kwd">abstract</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Tree</span></code></li><li class="L2"><code><span class="kwd">case</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Node</span><span class="pun">(</span><span class="pln">elem</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Int</span><span class="pun">,</span><span class="pln"> left</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Tree</span><span class="pun">,</span><span class="pln"> right</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Tree</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Tree</span></code></li><li class="L3"><code><span class="kwd">case</span><span class="pln"> </span><span class="kwd">object</span><span class="pln"> </span><span class="typ">Leaf</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Tree</span></code></li><li class="L4"><code></code></li><li class="L5"><code><span class="com">// Return the in-order traversal sequence of a given tree.</span></code></li><li class="L6"><code><span class="kwd">def</span><span class="pln"> inOrder</span><span class="pun">(</span><span class="pln">t</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Tree</span><span class="pun">):</span><span class="pln"> </span><span class="typ">List</span><span class="pun">[</span><span class="typ">Int</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> t </span><span class="kwd">match</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L7"><code><span class="pln">  </span><span class="kwd">case</span><span class="pln"> </span><span class="typ">Node</span><span class="pun">(</span><span class="pln">e</span><span class="pun">,</span><span class="pln"> l</span><span class="pun">,</span><span class="pln"> r</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> inOrder</span><span class="pun">(</span><span class="pln">l</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:::</span><span class="pln"> </span><span class="typ">List</span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:::</span><span class="pln"> inOrder</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span></code></li><li class="L8"><code><span class="pln">  </span><span class="kwd">case</span><span class="pln"> </span><span class="typ">Leaf</span><span class="pln">          </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="typ">List</span><span class="pun">()</span></code></li><li class="L9"><code><span class="pun">}</span></code></li></ol></pre>
+</figure>
+
+<div class="snippet-explanation" style="width: 350px;">
+  <h3>Switch on the structure of your data</h3>
+<p>In Scala, <em>case classes</em> are used to represent structural data
+types. They implicitly equip the class with meaningful <code>toString</code>,
+<code>equals</code> and <code>hashCode</code> methods, as well as the
+ability to be deconstructed with <em>pattern matching</em>.</p>
+<p>
+In this example, we define a small set of case classes that represent binary
+trees of integers (the generic version is omitted for simplicity here).
+In <code>inOrder</code>, the <code>match</code> construct chooses the right
+branch, depending on the type of <code>t</code>, and at the same time
+deconstructs the arguments of a <code>Node</code>.
+</p></div>
+</div>
+<div id="hidden-higher-order-functions"><div class="snippet-explanation" style="width: 100%;">
+  <h3>Go Functional with Higher-Order Functions</h3>
+  <p>In Scala, functions are values, and can be defined as anonymous functions
+  with a concise syntax.</p>
+</div>
+
+<figure class="code" style="width: 445px; float: left;">
+  <figcaption>Scala</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="kwd">val</span><span class="pln"> people</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pun">[</span><span class="typ">Person</span><span class="pun">]</span></code></li><li class="L1"><code></code></li><li class="L2"><code><span class="com">// Partition `people` into two arrays `minors` and `adults`.</span></code></li><li class="L3"><code><span class="com">// Use the higher-order function `(_.age &lt; 18)` as a predicate for partitioning.</span></code></li><li class="L4"><code><span class="kwd">val</span><span class="pln"> </span><span class="pun">(</span><span class="pln">minors</span><span class="pun">,</span><span class="pln"> adults</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> people partition </span><span class="pun">(</span><span class="pln">_</span><span class="pun">.</span><span class="pln">age </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">18</span><span class="pun">)</span></code></li></ol></pre>
+</figure>
+<figure class="code" style="width: 445px; float: right;">
+  <figcaption>Java</figcaption>
+  <pre class="prettyprint lang-scala linenums"><ol class="linenums"><li class="L0"><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Person</span><span class="pun">&gt;</span><span class="pln"> people</span><span class="pun">;</span></code></li><li class="L1"><code></code></li><li class="L2"><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Person</span><span class="pun">&gt;</span><span class="pln"> minors </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">&lt;</span><span class="typ">Person</span><span class="pun">&gt;(</span><span class="pln">people</span><span class="pun">.</span><span class="pln">size</span><span class="pun">());</span></code></li><li class="L3"><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Person</span><span class="pun">&gt;</span><span class="pln"> adults </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">&lt;</span><span class="typ">Person</span><span class="pun">&gt;(</span><span class="pln">people</span><span class="pun">.</span><span class="pln">size</span><span class="pun">());</span></code></li><li class="L4"><code><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Person</span><span class="pln"> person </span><span class="pun">:</span><span class="pln"> people</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></code></li><li class="L5"><code><span class="pln">    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">person</span><span class="pun">.</span><span class="pln">getAge</span><span class="pun">()</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">18</span><span class="pun">)</span></code></li><li class="L6"><code><span class="pln">        minors</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span><span class="pln">person</span><span class="pun">);</span></code></li><li class="L7"><code><span class="pln">    </span><span class="kwd">else</span></code></li><li class="L8"><code><span class="pln">        adults</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span><span class="pln">person</span><span class="pun">);</span></code></li><li class="L9"><code><span class="pun">}</span></code></li></ol></pre>
+</figure>
+
+<div class="snippet-explanation" style="width: 100%;">
+  <p>
+    In the Scala example on the left, the <code>partition</code> method, available on all
+    collection types (including <code>Array</code>), returns two new collections
+    of the same type. Elements from the original collection are partitioned
+    according to a predicate, which is given as a lambda, i.e., an anonymous
+    function. The <code>_</code> stands for the parameter to the lambda, i.e.,
+    the element that is being tested. This particular lambda can also be written
+    as <code>(x =&gt; x.age &lt; 18)</code>.
+  </p>
+  <p>The same program is implemented in Java on the right.</p>
+</div></div>
+
+<!-- <div class="highlighted-events">
+  <div class="container">
+    <div id="scaladays">
+      <a id="scaladays-register-btn" href="http://scaladays.org/">More Info</a>
+    </div>
+    <div id="scalawksp">
+      <a id="scalawksp-register-btn" href="http://lampwww.epfl.ch/~hmiller/scala2014">More Info</a>
+    </div>
+  </div>
+</div> -->
+
+<div class="events">
+  <div class="container">
+    <div class="row">
+      <div class="span12 upcoming-events">
+        <h2><span>Upcoming Events</span></h2>
+      </div>
+
+      <div class="span12" id="eventspane">
+
+        <!-- <a id="event-btn" style="margin-top: 6px" href="/events">More Events</a> -->
+        <!-- <div class="add-event">or <a href="https://github.com/scala/scala-lang/tree/master/events">add an event</a></div> -->
+
+      <div class="event-item-wrap event-item-front-page" onclick="window.location=&#39;https://skillsmatter.com/conferences/6862-scala-exchange-2015&#39;"><div class="event-item"><div class="event-title"><a href="https://skillsmatter.com/conferences/6862-scala-exchange-2015">Scala Exchange 15</a></div><div class="event-logo"><a href="https://skillsmatter.com/conferences/6862-scala-exchange-2015"><img class="event-logo" src="./resources/img/scalaexchange@2x.png" alt="Logo" width="34" height="34"></a></div><div class="event-float-right"><div class="event-location">London</div><div class="event-date">Dec 10-11 2015</div></div></div></div></div>
+    </div>
+  </div>
+
+   <div class="add-event"><a href="http://www.scala-lang.org/events">See more events</a> or <a href="https://github.com/scala/scala-lang/tree/master/events">add one to our feed</a></div>
+
+</div>
+
+<div class="training">
+  <div class="container">
+    <div class="row">
+      <div class="span12 upcoming-training">
+        <h2><span>Upcoming Training</span></h2>
+      </div>
+      <div class="span12" id="trainingspane">
+
+        <!-- <span class="center"><a id="training-btn" href="/training">More Training</a></span> -->
+        <!-- <div class="add-training">or <a href="https://github.com/scala/scala-lang/tree/master/training">add a training</a></div> -->
+        <div class="add-training"><a href="http://www.scala-lang.org/training">See more trainings</a> or <a href="https://github.com/scala/scala-lang/tree/master/training">add one to our feed</a></div>
+
+      <div class="training-item-wrap training-item-front-page" onclick="window.location=&#39;http://boldradius.com/detail/VIDDGiUAADcBUM8N/advanced-akka-with-scala&#39;"><div class="training-item"><div class="training-title"><a href="http://boldradius.com/detail/VIDDGiUAADcBUM8N/advanced-akka-with-scala">Advanced Akka with Scala</a></div><div class="training-date"><div class="date"><div class="month">Jul</div><div class="day">1</div></div><div class="year">2015</div></div><div class="training-float-right"><div class="training-location">San Jose / Virtual</div><div class="training-trainers-name"> By Brendan McAdams</div><div class="training-organizer">BoldRadius</div></div></div></div><div class="training-item-wrap training-item-front-page" onclick="window.location=&#39;http://www.trivadis.com/training/scala/advanced-scala-s-as.html&#39;"><div class="training-item"><div class="training-title"><a href="http://www.trivadis.com/training/scala/advanced-scala-s-as.html">Advanced Scala</a></div><div class="training-date"><div class="date"><div class="month">Jul</div><div class="day">2</div></div><div class="year">2015</div></div><div class="training-float-right"><div class="training-location">Zurich</div><div class="training-trainers-name"> By Normen Müller</div><div class="training-organizer">Trivadis</div></div></div></div><div class="training-item-wrap training-item-front-page" onclick="window.location=&#39;undefined&#39;"><div class="training-item"><div class="training-title"><a href="http://www.scala-lang.org/undefined">Stairway to Scala Applied</a></div><div class="training-date"><div class="date"><div class="month">Jul</div><div class="day">8</div></div><div class="year">2015</div></div><div class="training-float-right"><div class="training-location">San Francisco, CA</div><div class="training-trainers-name"> By Bill Venners and Dick Wall</div><div class="training-organizer">Escalate Software</div></div></div></div><div class="training-item-wrap training-item-front-page" onclick="window.location=&#39;https://skillsmatter.com/courses/456-typesafe-scaling-up-with-akka-and-scala&#39;"><div class="training-item"><div class="training-title"><a href="https://skillsmatter.com/courses/456-typesafe-scaling-up-with-akka-and-scala">Fast Track to Akka with Scala</a></div><div class="training-date"><div class="date"><div class="month">Jul</div><div class="day">13</div></div><div class="year">2015</div></div><div class="training-float-right"><div class="training-location">London</div><div class="training-trainers-name"> By null</div><div class="training-organizer">Skills Matter</div></div></div></div><div class="training-item-wrap training-item-front-page" onclick="window.location=&#39;http://iconotc.com/&#39;"><div class="training-item"><div class="training-title"><a href="http://iconotc.com/">Fast Track to Scala</a></div><div class="training-date"><div class="date"><div class="month">Jul</div><div class="day">13</div></div><div class="year">2015</div></div><div class="training-float-right"><div class="training-location">Madrid</div><div class="training-trainers-name"> By null</div><div class="training-organizer">Icono Training Consulting</div></div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="news">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+      </div>
+    </div>
+    <div class="row">
+      <div class="span7">
+  <h2 class="whats-new">What's New</h2>
+
+    <div class="news-item newsbox left">
+
+        <div class="news-category">news</div>
+
+
+        <div class="news-title"><a href="http://www.scala-lang.org/news/2015/06/25/bagwell-award-2015.html">Bill Venners receives community award</a></div>
+
+
+      <div class="news-date"><img src="./resources/img/date-icon@2x.png" alt="date icon" width="15" height="18"> Thursday, June 25, 2015</div>
+
+        <div class="news-body"><p>We are pleased to announce that the Phil Bagwell Memorial Scala Community Award for 2015 has been awarded to <a href="https://twitter.com/bvenners">Bill Venners</a>. The award was presented in Amsterdam at the outset of <a href="http://event.scaladays.org/scaladays-amsterdam-2015">Scala Days</a>.</p>
+
+<p>Bill is known to Scala users as:</p>
+
+<ul>
+<li>creator of <a href="http://scalatest.org/">ScalaTest</a>, a popular open-source test framework first <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=222678">released in 2008</a>, as well as other tools and libraries such as <a href="http://www.scalactic.org/">Scalactic</a></li>
+
+<li>co-author of the first Scala book, <a href="http://www.artima.com/shop/programming_in_scala_2ed"><em>Programming in Scala</em></a> (Artima)</li>
+
+<li>founder of <a href="http://www.artima.com/aboutartima.html">Artima</a>, which continues to publish <a href="http://www.artima.com/shop/catalog">Scala-themed books</a>, and hosted Scala-themed blogs and forums which were important in spreading the news about Scala in its early years</li>
+
+<li>friendly and tireless conference-goer, presenter, and trainer</li>
+</ul>
+
+<p>The Bagwell Award is named in honor of Phil Bagwell, who passed away in 2012. In a <a href="https://www.typesafe.com/blog/rip-phil-bagwell">2012 blog post</a>, Martin Odersky remembers Phil and his special place in the Scala community.</p>
+
+<p>Past winners of the award:</p>
+
+<ul>
+<li>2014: <a href="https://kojoenv.wordpress.com/2014/09/27/phil-bagwell-award/">Lalit Pant</a></li>
+
+<li>2013: <a href="https://twitter.com/dickwall">Dick Wall</a></li>
+</ul></div>
+
+    </div>
+    <div class="shadow">
+
+        <div class="more"><a href="http://www.scala-lang.org/news/2015/06/25/bagwell-award-2015.html">more...</a></div>
+
+    </div>
+
+</div>
+<div class="span5 newsbox right">
+  <h2 class="recently">Recently...</h2>
+  <div class="recent-news-items">
+
+
+
+
+
+
+      <div class="recent-news-item">
+
+          <div class="recent-news-title"><a href="http://www.scala-lang.org/news/2.11.7">Scala 2.11.7 is now available!</a></div>
+
+
+        <div class="recent-news-date"><img style="margin-top: -3px;" src="./resources/img/recent-date-icon@2x.png" alt="date-icon" width="10" height="12"> Tuesday, June 23, 2015
+
+          <span class="recent-news-category">announcement</span>
+        </div>
+
+          <div class="recent-news-body">We are very pleased to announce the availability of Scala 2.11.7! We would like to highlight the following changes: Exhaustivity checking for pattern matching is...</div>
+
+      </div>
+
+
+
+      <div class="recent-news-item">
+
+          <div class="recent-news-title"><a href="http://www.scala-lang.org/news/2.12.0-M1">Scala 2.12.0-M1 is now available!</a></div>
+
+
+        <div class="recent-news-date"><img style="margin-top: -3px;" src="./resources/img/recent-date-icon@2x.png" alt="date-icon" width="10" height="12"> Tuesday, May 05, 2015
+
+          <span class="recent-news-category">announcement</span>
+        </div>
+
+          <div class="recent-news-body">We are very pleased to announce the release of Scala 2.12.0-M1! Download a distribution from scala-lang.org Obtain it via Maven Central Code that compiles on...</div>
+
+      </div>
+
+
+
+      <div class="recent-news-item">
+
+          <div class="recent-news-title"><a href="http://www.scala-lang.org/news/2015/03/16/GSoC-projects.html">Google Summer of Code 2015</a></div>
+
+
+          <div class="recent-news-author"><span class="by">By</span> <div class="recent-news-author-name">Vojin Jovanovic</div></div>
+
+        <div class="recent-news-date"><img style="margin-top: -3px;" src="./resources/img/recent-date-icon@2x.png" alt="date-icon" width="10" height="12"> Monday, March 16, 2015
+
+          <span class="recent-news-category">news</span>
+        </div>
+
+          <div class="recent-news-body">This year the Scala team applied again for Google Summer of Code, and we’re happy to announce that we have been approved to be mentoring...</div>
+
+      </div>
+
+
+  </div>
+  <!-- <a class="more-news">More News</div> -->
+  <a class="rss" href="http://www.scala-lang.org/feed/index.xml"><img src="./resources/img/rss-icon@2x.png" alt="date-icon" width="16" height="16"></a>
+</div>
+<div class="span12">
+  <div class="post-news">
+    For more, visit our<br>
+    <a class="archive-btn" href="http://www.scala-lang.org/news/" title="News archive">News archive</a>
+    or
+    <a class="archive-btn" href="http://www.scala-lang.org/blog/" title="News archive">Blog</a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="twitter">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h2 class="twitterhdr"><span>Scala on Twitter</span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div id="tweets" class="tweets"><div class="tweet-container" style="opacity: 1;">          <div class="tweet">            <p class="text content">RT <a href="http://twitter.com/#!/valdo404" target="_blank">@valdo404</a>: Scala 2.11.7 now ships with lambda-compatible backend :) great work <a href="http://twitter.com/#!/scala_lang" target="_blank">@scala_lang</a>
+team <a href="https://t.co/gG9u1WdfvI" target="_blank">https://t.co/gG9u1WdfvI</a></p>          </div>          <div class="caret-container">            <div class="caret-divider">              <div class="caret-outer"></div>              <div class="caret-inner"></div>            </div>          </div>          <div class="raw bottom-anchored">            <div class="avatar-wrapper">              <img class="avatar" width="50" height="50" src="http://pbs.twimg.com/profile_images/3310435403/dc47c969494d3279783610ba3298f58b_reasonably_small.png">            </div>            <span class="tweet-username">              <a href="http://twitter.com/scala_lang" class="username" rel="external" target="_blank">scala_lang</a>            </span>          </div>        </div><div class="tweet-container" style="opacity: 1;">          <div class="tweet">            <p class="text content">RT <a href="http://twitter.com/#!/codecentric" target="_blank">@codecentric</a>: Ihr möchtet Scala lernen? Dann registriert euch für ein kostenloses <a href="http://twitter.com/#!/scala_lang" target="_blank">@scala_lang</a> Training mit <a href="http://twitter.com/#!/hseeberger" target="_blank">@hseeberger</a>: <a href="https://t.co/LfX" target="_blank">https://t.co/LfX</a>…</p>          </div>          <div class="caret-container">            <div class="caret-divider">              <div class="caret-outer"></div>              <div class="caret-inner"></div>            </div>          </div>          <div class="raw bottom-anchored">            <div class="avatar-wrapper">              <img class="avatar" width="50" height="50" src="http://pbs.twimg.com/profile_images/3310435403/dc47c969494d3279783610ba3298f58b_reasonably_small.png">            </div>            <span class="tweet-username">              <a href="http://twitter.com/scala_lang" class="username" rel="external" target="_blank">scala_lang</a>            </span>          </div>        </div><div class="tweet-container" style="opacity: 1;">          <div class="tweet">            <p class="text content">RT <a href="http://twitter.com/#!/SethTisue" target="_blank">@SethTisue</a>: Scala 2.11.7 is out — 53 closed tickets, 124 merged PRs. thank you 36 contributors! details: <a href="http://t.co/JUGp7igfFf" target="_blank">http://t.co/JUGp7igfFf</a></p>          </div>          <div class="caret-container">            <div class="caret-divider">              <div class="caret-outer"></div>              <div class="caret-inner"></div>            </div>          </div>          <div class="raw bottom-anchored">            <div class="avatar-wrapper">              <img class="avatar" width="50" height="50" src="http://pbs.twimg.com/profile_images/3310435403/dc47c969494d3279783610ba3298f58b_reasonably_small.png">            </div>            <span class="tweet-username">              <a href="http://twitter.com/scala_lang" class="username" rel="external" target="_blank">scala_lang</a>            </span>          </div>        </div><div class="tweet-container" style="opacity: 1;">          <div class="tweet">            <p class="text content">RT <a href="http://twitter.com/#!/odersky" target="_blank">@odersky</a>: Two new SIPs: On on trait parameters, the other on combining repeated and by-name. <a href="http://t.co/wUd3qFwZ1C" target="_blank">http://t.co/wUd3qFwZ1C</a></p>          </div>          <div class="caret-container">            <div class="caret-divider">              <div class="caret-outer"></div>              <div class="caret-inner"></div>            </div>          </div>          <div class="raw bottom-anchored">            <div class="avatar-wrapper">              <img class="avatar" width="50" height="50" src="http://pbs.twimg.com/profile_images/3310435403/dc47c969494d3279783610ba3298f58b_reasonably_small.png">            </div>            <span class="tweet-username">              <a href="http://twitter.com/scala_lang" class="username" rel="external" target="_blank">scala_lang</a>            </span>          </div>        </div></div>
+        <br>&nbsp;
+        <div class="see-more-tweets">See more tweets, or</div>
+        <a id="twitter-btn" href="https://twitter.com/scala_lang">Follow Scala on Twitter</a>
+        <br><a style="border-bottom: 0px;" href="https://twitter.com/scala_lang"><img style="padding-top: 8px;" src="./resources/img/twitter-logo-white-lg@2x.png" alt="white Twitter logo" width="42" height="42"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="epfl-picture-box">
+  <div class="container">
+  </div>
+</div>
+
+
+  <div class="footer">
+  <div class="container">
+    <ul>
+      <li><h5>Documentation</h5></li>
+      <li><a href="http://www.scala-lang.org/documentation/getting-started.html">Getting Started</a></li>
+      <li><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></li>
+      <li><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></li>
+      <li><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></li>
+      <li><a href="http://www.scala-lang.org/files/archive/spec/2.11/">Language Specification</a></li>
+    </ul>
+    <ul>
+      <li><h5>Download</h5></li>
+        <li><a href="http://www.scala-lang.org/download/">Stable Release</a></li>
+        <li><a href="http://www.scala-lang.org/download/2.12.0-M1.html">Development Release</a></li>
+    </ul>
+    <ul>
+      <li><h5>Community</h5></li>
+      <li><a href="http://www.scala-lang.org/community/index.html#mailing_lists">Mailing lists</a></li>
+      <li><a href="http://www.scala-lang.org/community/index.html#irc">Social Media</a></li>
+    </ul>
+    <ul>
+      <li><h5>Contribute</h5></li>
+      <li><a href="http://www.scala-lang.org/contribute/bug-reporting-guide.html">Report an Issue</a></li>
+      <li><a href="http://www.scala-lang.org/contribute">How to Help</a></li>
+      <li><a href="http://www.scala-lang.org/contribute/hacker-guide.html">Contributor's Guide</a></li>
+      <li><a href="http://www.scala-lang.org/contribute/scala-fame.html">Contributor's Hall of Fame</a></li>
+    </ul>
+    <ul>
+      <li><h5>Scala</h5></li>
+      <li><a href="http://www.scala-lang.org/blog">Blog</a></li>
+      <li><a href="http://www.scala-lang.org/news">News Archive</a></li>
+      <li><a href="http://www.scala-lang.org/license.html">Scala License</a></li>
+    </ul>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <a style="float: left; margin-right: 8px;" href="http://www.epfl.ch/"><img src="./resources/img/epfl-logo@2x.png" alt="EPFL logo" width="83" height="40"></a>
+        <p style="float: left;"><br>Copyright © 2002-<span class="current-year">2015</span> École Polytechnique Fédérale de Lausanne
+        (EPFL)<br> Lausanne, Switzerland</p>
+      </div>
+      <div class="scala-logo-footer">
+        <img src="./resources/img/scala-logo-red-footer@2x.png" alt="Scala footer logo" width="96" height="37">
+      </div>
+    </div> <!-- container -->
+    </div> <!-- footer -->
+
+
+    <div class="footer2">
+      <div class="container">
+        <p>本网站由<a href="mailto:maketa521@me.com">Michael Dai</a>根据官方网站翻译，旨在帮助更多的朋友了解Scala技术，官方地址<a href="http://www.scala-lang.org/">http://www.scala-lang.org</a>。 </p>
+      </div>
+    </div>
+    <!-- prettify  js -->
+    <script src="./resources/js/prettify.js" type="text/javascript"></script>
+    <script src="./resources/js/lang-scala.js" type="text/javascript"></script>
+
+    <!-- jquery js -->
+    <script src="./resources/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="./resources/js/jquery.stellar.min.js" type="text/javascript"></script>
+    <script src="./resources/js/tweetMachine.min.js" type="text/javascript"></script>
+
+    <!-- modernizr js -->
+    <script src="./resources/js/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript"></script>
+
+    <!-- retina js -->
+    <script src="./resources/js/retina.js" type="text/javascript"></script>
+
+    <!-- backstretch js -->
+    <script src="./resources/js/jquery.backstretch.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="./resources/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- hook -->
+    <link rel="stylesheet" href="./resources/hook/hook.css" type="text/css" />
+    <script src="./resources/hook/hook.js" type="text/javascript"></script>
+    <script src="./resources/hook/mousewheel.js" type="text/javascript"></script>
+
+    <!-- table of contents JS -->
+    <script src="./resources/js/toc.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+        function moveScroller() {
+          if ($(".sidebar").length == 0)
+            return;
+          var a = function() {
+            var topOfScroll = $(window).scrollTop();
+            var topOfSidebar = $(".sidebar").offset().top;
+            var sidebarInner = $(".sidebar-inner");
+            var bottomOfSidebarInner = $(".sidebar-inner").offset().top + $(".sidebar-inner").outerHeight();
+            var topOfFooter = $(".footer").offset().top - 10;
+            var footerHeight = $(".footer").outerHeight();
+            if (topOfScroll > topOfSidebar) {
+              if (bottomOfSidebarInner > topOfFooter) {
+                sidebarInner.css({position:"fixed",bottom:footerHeight,top:""});
+              } else {
+                sidebarInner.css({position:"fixed",top:"10px",bottom:""});
+              }
+            } else {
+              sidebarInner.css({position:"relative",top:""});
+            }
+          };
+          $(window).scroll(a);a()
+        }
+        moveScroller();
+      })
+    </script>
+
+
+    <!-- Custom javascript -->
+    <script src="./resources/js/main.js" type="text/javascript"></script>
+
+
+</body>
+</html>
