@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>What is Scala? | The Scala Programming Language</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="icon" type="image/png" href="./resources/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="./resources/favicon.ico">
+
+    <!-- prettify CSS (corresponding js at footer)-->
+    <link rel="stylesheet" href="./resources/css/prettify.css" type="text/css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./resources/css/bootstrap.css" type="text/css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./resources/css/main.css" type="text/css" />
+
+    <!-- Typekit (should stay at top of page, do not move to footer)-->
+    <script type="text/javascript" src="//use.typekit.net/abh3wgk.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  </head>
+  <body>
+
+
+<div class="darkstrip"></div>
+
+<div class="darkbluetopbar">
+  <div class="container" style="height: 100%">
+    <div class="navbar-wrap">
+      <div class="container" style="position: relative; height: 100%;">
+        <div class="scala-logo">
+          <a href="/index.html"><img src="./resources/img/scala-logo-white-sm.png" alt="white Scala logo" /></a>
+        </div>
+        <ul class="nav">
+  <li><a href="/documentation/">Documentation</a></li>
+  <li><a href="/download/">Download</a></li>
+  <li><a href="/community/">Community</a></li>
+  <li><a href="/contribute/">Contribute</a></li>
+  <li id="source-code" >
+    <a href="http://github.com/scala/scala"><img src="./resources/img/github-logo.png" alt="GitHub Logo" /></a>
+    <div class="toptip">Source Code</div>
+  </li>
+  <li id="scala-lang-twitter">
+    <a href="http://twitter.com/scala_lang"><img src="./resources/img/twitter-logo-white.png" alt="Twitter Logo" /></a>
+    <div class="toptip">Scala on Twitter</div>
+  </li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="midbluebar">
+  <div class="container">
+    <h1 id="page-title">What is Scala?</h1>
+  </div>
+</div>
+
+<div class="page-container">
+  <div class="container" style="min-height: 540px;">
+    <!-- <div class="row"> -->
+      <!-- <div class="span12"> -->
+          <div class="main-page-column">
+
+              <div class="written">Written By: <span class="by">Martin Odersky</span></div>
+
+            <h2 id='a_scalable_language'>A Scalable language</h2>
+
+<p>Scala is an acronym for &#8220;Scalable Language&#8221;. This means that Scala grows with you. You can play with it by typing one-line expressions and observing the results. But you can also rely on it for large mission critical systems, as many companies, including Twitter, LinkedIn, or Intel do.</p>
+
+<p>To some, Scala feels like a scripting language. Its syntax is concise and low ceremony; its types get out of the way because the compiler can infer them. There&#8217;s a REPL and IDE worksheets for quick feedback. Developers like it so much that Scala won the ScriptBowl contest at the 2012 JavaOne conference.</p>
+
+<p>At the same time, Scala is the preferred workhorse language for many mission critical server systems. The generated code is on a par with Java&#8217;s and its precise typing means that many problems are caught at compile-time rather than after deployment.</p>
+
+<p>At the root, the language&#8217;s scalability is the result of a careful integration of object-oriented and functional language concepts.</p>
+
+<h2 id='objectoriented'>Object-Oriented</h2>
+
+<p>Scala is a pure-bred object-oriented language. Conceptually, every value is an object and every operation is a method-call. The language supports advanced component architectures through classes and traits.</p>
+
+<p>Many traditional design patterns in other languages are already natively supported. For instance, singletons are supported through object definitions and visitors are supported through pattern matching. Using implicit classes, Scala even allows you to add new operations to existing classes, no matter whether they come from Scala or Java!</p>
+
+<h2 id='functional'>Functional</h2>
+
+<p>Even though its syntax is fairly conventional, Scala is also a full-blown functional language. It has everything you would expect, including first-class functions, a library with efficient immutable data structures, and a general preference of immutability over mutation.</p>
+
+<p>Unlike with many traditional functional languages, Scala allows a gradual, easy migration to a more functional style. You can start to use it as a &#8220;Java without semicolons&#8221;. Over time, you can progress to gradually eliminate mutable state in your applications, phasing in safe functional composition patterns instead. As Scala programmers we believe that this progression is often a good idea. At the same time, Scala is not opinionated; you can use it with any style you prefer.</p>
+
+<h2 id='seamless_java_interop'>Seamless Java Interop</h2>
+
+<p>Scala runs on the JVM. Java and Scala classes can be freely mixed, no matter whether they reside in different projects or in the same. They can even mutually refer to each other, the Scala compiler contains a subset of a Java compiler to make sense of such recursive dependencies.</p>
+
+<p>Java libraries, frameworks and tools are all available. Build tools like ant or maven, IDEs like Eclipse, IntelliJ, or Netbeans, frameworks like Spring or Hibernate all work seamlessly with Scala. Scala runs on all common JVMs and also on Android.</p>
+
+<p>The Scala community is an important part of the Java ecosystem. Popular Scala frameworks, including Akka, Finagle, and the Play web framework include dual APIs for Java and Scala.</p>
+
+<h2 id='functions_are_objects'>Functions are Objects</h2>
+
+<p>Scala&#8217;s approach is to develop a small set of core constructs that can be combined in flexible ways. This applies also to its object-oriented and functional natures. Features from both sides are unified to a degree where Functional and Object-oriented can be seen as two sides of the same coin.</p>
+
+<p>Some examples: Functions in Scala are objects. The function type is just a regular class. The algebraic data types found in languages such as Haskell, F# or ML are modelled in Scala as class hierarchies. Pattern matching is possible over arbitrary classes.</p>
+
+<h2 id='futureproof'>Future-Proof</h2>
+
+<p>Scala particularly shines when it comes to scalable server software that makes use of concurrent and synchronous processing, parallel utilization of multiple cores, and distributed processing in the cloud.</p>
+
+<p>Its functional nature makes it easier to write safe and performant multi-threaded code. There&#8217;s typically less reliance on mutable state and Scala&#8217;s futures and actors provide powerful tools for organizing concurrent system at a high-level of abstraction.</p>
+
+<h2 id='fun'>Fun</h2>
+
+<p>Maybe most important is that programming in Scala tends to be very enjoyable. No boilerplate, rapid iteration, but at the same time the safety of a strong static type system. As <a href='http://www.infoq.com/articles/guardian_scala'>Graham Tackley from the Guardian says</a>: <em>&#8220;We&#8217;ve found that Scala has enabled us to deliver things faster with less code. It&#8217;s reinvigorated the team.&#8221;</em></p>
+
+<p>If you haven&#8217;t yet, try it out! <a href='./documentation'>Here are some resources to get started</a>.</p>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar-inner">
+              <div class="contents">Contents</div>
+              <div id="toc"></div>
+              <br/>
+              <div class="alert-info">
+                <a href="/contribute/documentation.html#updating_scalalangorg"><p><strong>Problem with this page?</strong>
+                Please help us fix it!</p></a>
+              </div>
+            </div>
+          </div>
+          <div style="clear:both"></div>
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+
+  <div class="footer">
+  <div class="container">
+    <ul>
+      <li><h5>Documentation</h5></li>
+      <li><a href="/documentation/getting-started.html">Getting Started</a></li>
+      <li><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></li>
+      <li><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></li>
+      <li><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></li>
+      <li><a href="/files/archive/spec/2.11/">Language Specification</a></li>
+    </ul>
+    <ul>
+      <li><h5>Download</h5></li>
+        <li><a href="/download/">Stable Release</a></li>
+        <li><a href="/download/2.12.0-M1.html">Development Release</a></li>
+    </ul>
+    <ul>
+      <li><h5>Community</h5></li>
+      <li><a href="/community/index.html#mailing_lists">Mailing lists</a></li>
+      <li><a href="/community/index.html#irc">Social Media</a></li>
+    </ul>
+    <ul>
+      <li><h5>Contribute</h5></li>
+      <li><a href="/contribute/bug-reporting-guide.html">Report an Issue</a></li>
+      <li><a href="/contribute">How to Help</a></li>
+      <li><a href="/contribute/hacker-guide.html">Contributor's Guide</a></li>
+      <li><a href="/contribute/scala-fame.html">Contributor's Hall of Fame</a></li>
+    </ul>
+    <ul>
+      <li><h5>Scala</h5></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/news">News Archive</a></li>
+      <li><a href="/license.html">Scala License</a></li>
+    </ul>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <a style="float: left; margin-right: 8px;" href="http://www.epfl.ch"><img src="./resources/img/epfl-logo.png" alt="EPFL logo" /></a>
+        <p style="float: left;"><br/>Copyright &copy; 2002-<span class="current-year"></span> École Polytechnique Fédérale de Lausanne
+        (EPFL)<br/> Lausanne, Switzerland</p>
+      </div>
+      <div class="scala-logo-footer">
+        <img src="./resources/img/scala-logo-red-footer.png" alt="Scala footer logo" />
+      </div>
+    </div> <!-- container -->
+    </div> <!-- footer -->
+
+    <!-- prettify  js -->
+    <script src="./resources/js/vendor/prettify/prettify.js" type="text/javascript" ></script>
+    <script src="./resources/js/vendor/prettify/lang-scala.js" type="text/javascript" ></script>
+
+    <!-- jquery js -->
+    <script src="./resources/js/vendor/jquery-1.8.3.min.js" type="text/javascript" ></script>
+    <script src="./resources/js/vendor/jquery.stellar.min.js" type="text/javascript" ></script>
+    <script src="./resources/js/vendor/tweetMachine.min.js" type="text/javascript" ></script>
+
+    <!-- modernizr js -->
+    <script src="./resources/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript" ></script>
+
+    <!-- retina js -->
+    <script src="./resources/js/vendor/retina.js" type="text/javascript" ></script>
+
+    <!-- backstretch js -->
+    <script src="./resources/js/vendor/jquery.backstretch.min.js" type="text/javascript" ></script>
+
+    <!-- Bootstrap JS -->
+    <script src="./resources/js/vendor/bootstrap.min.js" type="text/javascript" ></script>
+
+
+    <!-- table of contents JS -->
+    <script src="./resources/js/vendor/toc.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+        function moveScroller() {
+          if ($(".sidebar").length == 0)
+            return;
+          var a = function() {
+            var topOfScroll = $(window).scrollTop();
+            var topOfSidebar = $(".sidebar").offset().top;
+            var sidebarInner = $(".sidebar-inner");
+            var bottomOfSidebarInner = $(".sidebar-inner").offset().top + $(".sidebar-inner").outerHeight();
+            var topOfFooter = $(".footer").offset().top - 10;
+            var footerHeight = $(".footer").outerHeight();
+            if (topOfScroll > topOfSidebar) {
+              if (bottomOfSidebarInner > topOfFooter) {
+                sidebarInner.css({position:"fixed",bottom:footerHeight,top:""});
+              } else {
+                sidebarInner.css({position:"fixed",top:"10px",bottom:""});
+              }
+            } else {
+              sidebarInner.css({position:"relative",top:""});
+            }
+          };
+          $(window).scroll(a);a()
+        }
+        moveScroller();
+      })
+    </script>
+
+
+    <!-- Custom javascript -->
+    <script src="./resources/js/main.js" type="text/javascript"></script>
+  </body>
+</html>
