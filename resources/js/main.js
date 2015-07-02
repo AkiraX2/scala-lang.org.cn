@@ -19,7 +19,7 @@ function getOS() {
 $(document).ready(function(){
 
   // background image on frontpage
-  $(".splash").backstretch("./resources/img/view-leman-opt2.jpg");
+  $(".splash").backstretch("/resources/img/view-leman-opt2.jpg");
 
   // tooltips (front page)
   $(".marker").mouseover(function(){ $(".tip").show(); });
@@ -287,7 +287,7 @@ $(document).ready(function(){
 
     {
       "title": "Scala Exchange 15",
-      "logo": "./resources/img/scalaexchange.png",
+      "logo": "/resources/img/scalaexchange.png",
       "location": "London",
       "start": "10 December 2015",
       "end": "11 December 2015",
