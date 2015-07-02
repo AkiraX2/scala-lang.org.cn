@@ -19,7 +19,7 @@ function getOS() {
 $(document).ready(function(){
 
   // background image on frontpage
-  $(".splash").backstretch("/resources/img/view-leman-opt2.jpg");
+  $(".splash").backstretch("./resources/img/view-leman-opt2.jpg");
 
   // tooltips (front page)
   $(".marker").mouseover(function(){ $(".tip").show(); });
@@ -283,94 +283,94 @@ $(document).ready(function(){
   }
 
   var scalaLangEvents = [
-  
-  
+
+
     {
       "title": "Scala Exchange 15",
-      "logo": "/resources/img/scalaexchange.png",
+      "logo": "./resources/img/scalaexchange.png",
       "location": "London",
       "start": "10 December 2015",
       "end": "11 December 2015",
       "url": "https://skillsmatter.com/conferences/6862-scala-exchange-2015",
     },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ];
 
   function doPopulateEventsPane(allEvents) {
@@ -432,9 +432,10 @@ $(document).ready(function(){
   }
 
   $.ajax({
-    url: "/resources/php/typesafe-feed-events.php",
+    url: "http://www.scala-lang.org/resources/php/typesafe-feed-events.php",
     type: "GET",
-    dataType: "json",
+    // dataType: "json",
+    dataType: 'JSONP',
     success: onEventsAjaxSuccess,
     error: onEventsAjaxError
   });
@@ -460,8 +461,8 @@ $(document).ready(function(){
   }
 
   var scalaLangTrainings = [
-  
-  
+
+
     {
       title: "Stairway to Scala Applied",
       description: "Learn Scala from Bill Venners and Dick Wall in this 3 day, hands on course.",
@@ -476,44 +477,44 @@ $(document).ready(function(){
         }
       ]
     },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ];
 
   function flattenSessions(trainings) {
@@ -585,9 +586,10 @@ $(document).ready(function(){
   }
 
   $.ajax({
-    url: "/resources/php/typesafe-feed-trainings.php",
+    url: "http://www.scala-lang.org/resources/php/typesafe-feed-trainings.php",
     type: "GET",
-    dataType: "json",
+    // dataType: "json",
+    dataType: 'JSONP',
     success: onTrainingsAjaxSuccess,
     error: onTrainingsAjaxError
   });
@@ -596,44 +598,44 @@ $(document).ready(function(){
 
 });
 
-/**************************
- * Google Analytics       *
- **************************/
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-574683-6']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-var f = function(event){
-  var href = $(this).attr('href');
-  var target = $(this).attr('target');
-  _gaq.push(['_trackEvent','Downloads','Download',href]);
-  if (target === undefined || target.toLowerCase() != '_blank') {
-    setTimeout(function() { location.href = href; }, 200);
-    return false;
-  }
-};
-function endsWith(str, suffix) {
-    if (str && suffix)
-      return str.indexOf(suffix, str.length - suffix.length) !== -1;
-}
-$(function(){
-  $('a').filter(function(){
-    var href = $(this).attr('href');
-    return !(endsWith(href,'/') || endsWith(href,'html') || $(this).hasClass('no-analytics'));
-  }).click(f);
-});
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-23127719-1', 'typesafe.com', {'allowLinker': true, 'name': 'tsTracker'});
-ga('tsTracker.require', 'linker');
-ga('tsTracker.linker:autoLink', ['typesafe.com','playframework.com','scala-lang.org','scaladays.org','spray.io','akka.io','scala-sbt.org','scala-ide.org']);
-ga('tsTracker.send', 'pageview');
+// /**************************
+//  * Google Analytics       *
+//  **************************/
+// var _gaq = _gaq || [];
+// _gaq.push(['_setAccount', 'UA-574683-6']);
+// _gaq.push(['_trackPageview']);
+//
+// (function() {
+//   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+// })();
+// var f = function(event){
+//   var href = $(this).attr('href');
+//   var target = $(this).attr('target');
+//   _gaq.push(['_trackEvent','Downloads','Download',href]);
+//   if (target === undefined || target.toLowerCase() != '_blank') {
+//     setTimeout(function() { location.href = href; }, 200);
+//     return false;
+//   }
+// };
+// function endsWith(str, suffix) {
+//     if (str && suffix)
+//       return str.indexOf(suffix, str.length - suffix.length) !== -1;
+// }
+// $(function(){
+//   $('a').filter(function(){
+//     var href = $(this).attr('href');
+//     return !(endsWith(href,'/') || endsWith(href,'html') || $(this).hasClass('no-analytics'));
+//   }).click(f);
+// });
+//
+// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//
+// ga('create', 'UA-23127719-1', 'typesafe.com', {'allowLinker': true, 'name': 'tsTracker'});
+// ga('tsTracker.require', 'linker');
+// ga('tsTracker.linker:autoLink', ['typesafe.com','playframework.com','scala-lang.org','scaladays.org','spray.io','akka.io','scala-sbt.org','scala-ide.org']);
+// ga('tsTracker.send', 'pageview');
